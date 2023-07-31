@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  background-color: #646464;
+  padding: 16px;
+}
+
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 16px;
+}
+
+input[type='checkbox'] {
+  margin: 0;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ddd;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+input[type='checkbox']::before {
+  content: '\2714';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: #fff;
+  opacity: 0;
+}
+
+input[type='checkbox']:checked {
+  background-color: #fc7500;
+}
+
+input[type='checkbox']:checked::before {
+  opacity: 1;
+}
+
+th:first-child input[type='checkbox'] {
+  margin-right: 4px;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+input[type='checkbox']:focus {
+  outline: none;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
